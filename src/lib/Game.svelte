@@ -1,10 +1,11 @@
 <script lang="ts">
-  import Button from "./Button.svelte";
-  import Controls from "./Controls.svelte";
-  import Modal from "./Modal.svelte";
-  import Stats from "./Stats.svelte";
-  import { gameMachine, type GameEvent, type GameState } from "./game-machine";
-  import { useMachine } from "./machine";
+  import { Button, Controls, Modal, Stats } from "./components";
+  import {
+    gameMachine,
+    useMachine,
+    type GameEvent,
+    type GameState,
+  } from "./machines";
 
   const { send, state: gameState } = useMachine<GameState, GameEvent>(
     gameMachine,
